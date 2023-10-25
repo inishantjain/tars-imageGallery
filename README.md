@@ -1,6 +1,3 @@
-Certainly! Here's the markdown for the Image Gallery project README:
-
-```markdown
 # Image Gallery Project
 
 This is a simple Image Gallery project built using React, Context API, and Tailwind CSS. It fetches images from the Unsplash API and allows users to search for images based on keywords. You can use this project as a starting point for building your own image gallery applications.
@@ -73,7 +70,4 @@ You can easily customize this project by:
 - This project uses the Unsplash API to fetch images. Visit [Unsplash](https://unsplash.com/) for more details on their API.
 
 
----
 
-Enjoy building your own Image Gallery project with React, Context API, and Tailwind CSS! If you have any questions or need further assistance, please don't hesitate to reach out.
-```
