@@ -1,27 +1,79 @@
-# React + TypeScript + Vite
+Certainly! Here's the markdown for the Image Gallery project README:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```markdown
+# Image Gallery Project
 
-Currently, two official plugins are available:
+This is a simple Image Gallery project built using React, Context API, and Tailwind CSS. It fetches images from the Unsplash API and allows users to search for images based on keywords. You can use this project as a starting point for building your own image gallery applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Fetches images from the Unsplash API.
+- Dynamic grid layout for image cards.
+- Search functionality to filter images by keywords.
+- Responsive design with Tailwind CSS.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+Follow these instructions to set up and run the project on your local machine.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/inishantjain/tars-imageGallery
+   ```
+
+3. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+4. **Get your Unsplash API Access Key**:
+
+   To fetch images from the Unsplash API, you need to create a developer account on [Unsplash](https://unsplash.com/developers) and obtain an API Access Key.
+
+5. **Set your API Access Key**:
+
+   In the project directory, create a `.env.local` file and add your API Access Key:
+   similar to `env.example` file.
+
+6. **Run the application**:
+
+   ```bash
+   npm run dev
+   ```
+
+The application should start locally at [http://localhost:5173](http://localhost:5173).
+
+## How to Use
+
+- Enter keywords in the search bar to filter images based on your search query.
+- Click on the Twitter and Instagram icons in the image cards to visit the respective profiles.
+
+## Project Structure
+
+The project is organized with the following structure:
+
+- `src` - Contains the main source code.
+  - `components` - React components used in the project.
+  - `context` - Context API for managing global state.
+  - `images` - Images and icons used in the project.
+  - `styles` - Tailwind CSS styles.
+  - `App.js` - The main application component.
+
+## Customization
+
+You can easily customize this project by:
+
+- Modifying the layout and styles in the `index.css` file.
+- Adding additional features or functionality to enhance the image gallery.
+
+## Credits
+
+- This project uses the Unsplash API to fetch images. Visit [Unsplash](https://unsplash.com/) for more details on their API.
+
+
+---
+
+Enjoy building your own Image Gallery project with React, Context API, and Tailwind CSS! If you have any questions or need further assistance, please don't hesitate to reach out.
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
