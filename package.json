@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "loadenv && vite",
+    "loadenv": "VITE_UNSPLASH_ACCESS_KEY=Cn3KdLQBCxq-4OZ8rQj8FRGlXkppuaVNz4z0LMZplKU",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
