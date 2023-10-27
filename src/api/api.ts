@@ -1,11 +1,19 @@
 import axios from "axios";
-
-axios.defaults.headers.get.Authorization = `Client-ID ${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}`;
+const API_KEY =
+  import.meta.env.VITE_UNSPLASH_ACCESS_KEY ||
+  "Cn3KdLQBCxq-4OZ8rQj8FRGlXkppuaVNz4z0LMZplKU";
+axios.defaults.headers.get.Authorization = `Client-ID ${API_KEY}`;
 
 const UNSPLASH_URL = "https://api.unsplash.com/photos";
 const UNSPLASH_SEARCH_URL = "https://api.unsplash.com/search/photos";
 
-export const getImagesApi = async ({ page = 1, query }: { page?: number; query: string }) => {
+export const getImagesApi = async ({
+  page = 1,
+  query,
+}: {
+  page?: number;
+  query: string;
+}) => {
   let response: Card[] = [];
   console.log(page);
   try {
@@ -30,7 +38,7 @@ export const getImagesApi = async ({ page = 1, query }: { page?: number; query: 
 export const getImageByIdApi = async (id: string) => {
   let response: Modal | undefined;
   try {
-    let url = new URL(UNSPLASH_URL);
+    const url = new URL(UNSPLASH_URL);
     url.pathname = "photos/" + id;
     const res = await axios.get(url.toString());
 
